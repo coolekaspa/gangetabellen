@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+</head>
+<body>
+
+<h1 id="head">G A N G E T A B E L L E N</h1>
+<button onclick="gang()" id="start">View</button>
+<p id="bal"></p>
+
+<style>
+
+body {
+    background-color: rgba(20, 20, 20, 1);
+}
+
+#start {
+    position: relative;
+    left: 50%;
+    width: 200px;
+    height: 100px;
+    margin-left: -100px;
+    top: 250px;
+    background-color: rgba(100, 100, 100, 1);
+    border: 0px;
+    font-size: 50px;
+    font-family: monospace;
+    color: white;
+    border-radius: 10px;
+    transition: all .5s;
+}
+
+#start:hover {
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+}
+
+#bal {
+    color: white;
+    position: absolute;
+    left: 47%;
+    top: 40%;
+    font-family: monospace;
+    font-size: 30px;
+
+}
+
+#head {
+    position: absolute;
+    left: 29%;
+    color: white;
+    font-size: 60px;
+    top: 50px;
+    font-family: monospace;
+}
+
+#start:hover {
+    background-color: yellowgreen;
+}
+
+
+
+</style>
+<script>
+
+var num= prompt("What number do you wanna se?");
+var antall= prompt("How long do you want the list to be?")
+var numb= parseInt(num);
+var dat= Date();
+
+
+function gang() {
+    for(var i=0; i<=antall; i++){
+        document.getElementById("bal").innerHTML += (String(i) + " - " + numb*i + "<br>");
+        
+    }
+}
+
+    
+</script>
+</body>
+
+</html>
